@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color:#121c22;
+}
+.baslik {
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 48px;
+    text-shadow: 6px white;
+    color: white;   
+}
+nav {
+    text-align: center;
+    
+}
+
+.menu a {
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #f8d69fe1;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    width: 100px;
+    
+}
+nav a:hover {
+    color: red;
+    background-color: #f8d69fa6;
+    
+}
+.fa-sharp {
+    color: goldenrod;
+    text-shadow: none;
+}
+
+p {
+    font-family: "Rampart One", cursive;
+    text-shadow: -4px -2px 1px white;
+    font-size: 48px;
+    margin:100px;
+    color:#121c22;
+    text-align: center;
+    
+    
+}
+span{
+    text-shadow: none;
+}
+h2 {
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+}
+.box {
+    text-align: center;
+}
+img {
+    border-radius: 10px;
+}
+img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+.footer a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 10px;
+}
+.footer a:hover{
+    color: orangered;
+    background-color: #121c22;
+}
+input,textarea{
+    width: 50%;
+    margin: 10px auto 10px auto;
+    border: 1px solid #ffebcc;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+button{
+    width: 50%;
+    padding: 15px;
+    font-size:20px ;
+}
+.send{
+    box-sizing: border-box;
+    border: 1px solid white;
+    width: 52%;
+    color: white;
+    background-color:#f8d69fe1 ;
+    font-weight: 800;
+    border-radius: 5px;
+    
+}
+.send:hover{
+    color: orange;
+    font-size: 24px;
+}
+.send:hover:after{
+    content:"🚴‍♂️";
+}
+
+input,.input{
+    text-align: center;
+    border: 1px solid white;
+    color: white;
+}
+
+.input:hover,input:hover{
+    border: 1px solid;
+    border-color: red;
+} 
+
+
+.top a{
+    
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left: 1550px;
+    background-color: #f8d69fe1;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+}
+.top:hover{
+    cursor: pointer;
+}
+form{
+    border-color: red;
+}
+
+
