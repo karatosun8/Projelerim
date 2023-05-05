@@ -81,8 +81,9 @@ img:hover{
     text-decoration: none solid ;
     border-radius: 10px;
     display: inline-block;
-    margin-left: 570px;
+    /* margin-left: 570px; */
     margin-top: 80px;
+    float: right;
 }
 .button:hover{
     background-color: #FF7F50;
