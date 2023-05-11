@@ -73,6 +73,7 @@ body {
     border: 1px solid #d3d3d3;
     margin: 20px auto; /* elementi ortalamasını istediğimiz için auto değer veriyosruz*/
     border-radius: 25px;
+    
 }
 .main__search-bar--magnifier {
     height: 30px;
@@ -93,6 +94,5 @@ body {
     font-size: 14px;
     vertical-align: middle;
     outline: none;
-    
-    
+
 }
