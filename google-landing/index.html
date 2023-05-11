@@ -4,20 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Google-landing</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="kutu1"><ul>
-            <li>sefa</li>
-            <li>seee</li>
-            <li>ssss</li>
-        </ul>
-            
+    <header class="header">
+        <div class="header__left">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link"  href="">About</a></li>
+                <li class="header__item"><a class="header__link"  href="">Store</a></li>
+            </ul>
         </div>
-        <div class="kutu2">karatosun</div>
+        <div class="header__right">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link"  href="">Gmail</a></li>
+                <li class="header__item"><a class="header__link"  href="">Images</a></li>
+                <li class="header__item"><a class="header__link"  href=""><img class="header__link--appicon" src="./image/appicon.png" alt=""></a></li>
+                <li class="header__item"><a class="header__link"  href=""><button class="header__link--button">Sign in</button></a></li>
+            </ul>
+        </div>
     </header>
-    
+    <main class="main">
+        <img src="./image/googlelogo.png" class="main__logo" alt="">
+        <div class="main__search-bar">
+            <img src="./image/Magnifying_glass_icon.png" alt="" class="main__search-bar--magnifier">
+            <input type="search" name="" id="" class="main__search-bar--input">
+            <img src="./image/google_microphone.png" alt="" class="main__search-bar--mic">
+        </div>
+        <div class="main__buttons">
+            <button class="main__buttons--left">Google Search</button>
+            <button class="main__buttons--right"> I'm feeling Lucky</button>
+        </div>
+        <div class="main_language">
+            <p>Other languages you can use Google : <a href="">English</a></p>
+        </div>
+    </main>
 </body>
 </html>

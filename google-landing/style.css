@@ -1,13 +1,98 @@
-.kutu1 {
-    float: left;
-    width: 50%;
+/* google landing page  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
-.kutu2 {
-    float: left;
-    text-align: right;
-    width: 50%;
+
+body {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-li {
+
+/* HEADER */
+.header {
+    padding: 20px;
+    line-height: 27px;
+}
+.header__left {
     float: left;
-    list-style-type: none;
+}
+.header__right {
+    float: right;
+}
+.header__item {
+    display: inline-block; /* li leri yan yana getirdi*/
+}
+.header__link {
+    color :black;
+    padding: 0.5rem;
+    opacity: 0.7;
+}
+.header__link:hover{
+    text-decoration: underline;
+}
+.header__link--appicon{
+    opacity: 0.7;
+    vertical-align: middle;
+}
+.header__link--appicon:hover {
+    opacity: 1;
+}
+.header__link--button {
+    width: 70px;
+    height: 30px;
+    background-color: #498af4;
+    border-radius: 4px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.header__link--button:hover {
+    background-color: blue;
+}
+
+/* MAİN */
+
+.main {
+    margin-top: 150px;
+    text-align: center;
+}
+
+.main__logo {
+    height: 92px;
+    width: 272px;
+}
+.main__search-bar {
+    width: 460px;
+    height: 38px;
+    padding-top: 3px;
+    border: 1px solid #d3d3d3;
+    margin: 20px auto; /* elementi ortalamasını istediğimiz için auto değer veriyosruz*/
+    border-radius: 25px;
+}
+.main__search-bar--magnifier {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle; /*dikeyde hizalama için*/
+    cursor: pointer;
+}
+.main__search-bar--mic {
+    width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.main__search-bar--input {
+    width: 350px;
+    height: 25px;
+    border: none;
+    font-size: 14px;
+    vertical-align: middle;
+    outline: none;
+    
+    
 }
