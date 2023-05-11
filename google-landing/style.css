@@ -1,0 +1,13 @@
+.kutu1 {
+    float: left;
+    width: 50%;
+}
+.kutu2 {
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+li {
+    float: left;
+    list-style-type: none;
+}
