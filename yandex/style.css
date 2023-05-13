@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.line__bar {
+    font-size: 12.8px;
+    float: right;
+    margin-right: 10px;
+}
+#icon__mail{
+    width: 20px;
+    padding: 10px;
+    transform: scale(1.02);
+    vertical-align: middle;
+}
+.line__bar:hover{
+    color: red;
+    transform: scale(1.06);
+}
+.line__tab{
+    float: left;
+    margin: 200px auto 200px auto;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    margin-left: 150px;
+    
+}
+.tab {
+    margin: 15px;
+}
