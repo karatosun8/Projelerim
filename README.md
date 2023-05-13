@@ -1,4 +1,6 @@
 # Projelerim
+https://karatosun8.github.io/Projelerim/google-landing/
+
 https://karatosun8.github.io/Projelerim/parallax/
 
 https://karatosun8.github.io/Projelerim/Clarusway_Path/
