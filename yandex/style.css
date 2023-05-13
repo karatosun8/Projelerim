@@ -31,3 +31,14 @@ body {
 .tab {
     margin: 15px;
 }
+.homo__logo,.search{
+    float: left;
+}
+.line_search{
+    margin-top: 20px;
+}
+li {
+    float: left;
+    
+}
+
