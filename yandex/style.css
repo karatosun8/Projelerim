@@ -30,6 +30,14 @@ body {
 }
 .tab {
     margin: 15px;
+    
+}
+.tab:hover{
+    transform:scale(1.04);
+    
+}
+.tab__text:hover{
+    color: red;
 }
 .homo__logo,.search{
     float: left;
