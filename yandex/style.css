@@ -4,8 +4,9 @@ body {
 }
 .line__bar {
     font-size: 12.8px;
-    float: right;
+    text-align: right;
     margin-right: 10px;
+    
 }
 #icon__mail{
     width: 20px;
@@ -18,35 +19,63 @@ body {
     transform: scale(1.06);
 }
 .line__tab{
-    float: left;
-    margin: 200px auto 200px auto;
-    padding: 15px;
+    width: 1281px;
+    font-size: 12.8px;
+    text-align: center;
+    height: 81px;
     display: flex;
     align-items: center;
-    justify-items: center;
-    text-align: center;
-    margin-left: 150px;
-    
+    justify-content: center;
+    margin-top: 200px;
 }
 .tab {
-    margin: 15px;
+    text-align:center;
+    height: 81px;
+    width: 56px;
+    padding: 0 24px 0 24px;
+    position: relative;
     
 }
 .tab:hover{
-    transform:scale(1.04);
+    transform:scale(1.01);
     
 }
 .tab__text:hover{
     color: red;
 }
-.homo__logo,.search{
-    float: left;
-}
-.line_search{
-    margin-top: 20px;
-}
-li {
-    float: left;
-    
-}
+
+.main__search-bar {
+    width: 460px;
+    height: 38px;
+    padding-top: 3px;
+    border-radius: 25px;
+    border: 1px solid #d3d3d3;
+    margin: 20px auto; /* elementi ortalamasını istediğimiz için auto veriyoruz değere. */
+  }
+  .main__search-bar:hover {
+    box-shadow: rgb(211, 211, 211) 3px 3px 5px 0px;
+  }
+  .main__search-bar--magnifier {
+    height: 30px;
+    width: 30px;
+    vertical-align: middle; /*dikeyde hizalama*/
+    cursor: pointer;
+  }
+  /* .main__search-bar--mic {
+    height: 20px;
+    width: 15px;
+    vertical-align: middle;
+    cursor: pointer;
+  } */
+  .main__search-bar--input {
+    width: 350px;
+    height: 25px;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    font-size: 14px;
+  }
+
+
+
 
