@@ -8,10 +8,10 @@
 header{
     display: flex;
     justify-content:space-between;
-    
     padding: 2rem;
     flex-wrap: wrap;
     background-color: #35424a;
+    border-bottom: 1px solid #d13ea0;
 }
 .header__logo{
     font-size:2.5rem;
@@ -64,4 +64,138 @@ a li:hover{
 .banner__text h2{
     font-size: 2rem;
     padding: 10px;
+}
+.banner__text p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.mail {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    flex-wrap: wrap;
+    background-color: #35424a;
+    color: white;
+}
+.mail__title h3 {
+    font-size: 18px;
+    margin-top: 5px;
+    font-weight: 500;
+}
+.mail__form .input{
+    width: 20rem;
+    padding: 0.4rem;
+    text-transform: capitalize;
+    border-radius: 2px;
+}
+.mail__form .submit {
+    padding: 0.4rem 1.5rem;
+    background-color: #e8491d;
+    color: white;
+    border-radius: 2px;
+}
+.mail__form .submit:hover{
+    color: #070707;
+    cursor: pointer;
+    background-color: #526d7d;
+      
+}
+
+/*section threepart start */
+section.part3{
+    display: flex;
+    background-color: #e9e4e4;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+.part3 img{
+    height: 80px;
+    width: 80px;
+}
+.html,.css,.graphic{
+    margin: 10px;
+    justify-content: space-between;
+    text-align: center;
+}
+.html__text,.css__text,.graphic__text{
+    margin-top: 1rem;
+    font-size: 12px;
+}
+.html__text h2,.css__text h2,.graphic__text h2{
+    padding: 10px;
+}
+/*footer start */
+footer{
+    color: white;
+    background-color: #35424a;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+.footer__img{
+    padding: 55px;
+}
+/*About html start*/
+.about{
+    text-align: center;
+    padding: 30px;
+}
+.text1{
+    padding: 50px;
+}
+.text2{
+    background-color: #35424a;
+    padding: 50px;
+    color: whitesmoke;
+    font-weight: 400;
+}
+/* services start */
+
+
+article{
+    background-color: white;
+    display: flex;
+    padding: 50px;
+}
+.services__content1,.services__content2{
+    background-color: #DFDBDB;
+    margin: 20px;
+    line-height: 25px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+    
+}
+
+.services__get{
+    background-color: #35424a;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+    
+}
+.services__get input{
+    width:229px;
+    padding: 5px;
+}
+#submit__get{
+    width: 30%;
+    background-color: #e8491d;
+    border-radius: 8px;
+    color: white;
+    padding: 8px;
+}
+
+#submit__get:hover{
+    background-color: #526d7d;
+    color: #070707;
+}
+
+.name p,.email p,.message p{
+    padding: 0px;
+    opacity: 0.5;
 }
