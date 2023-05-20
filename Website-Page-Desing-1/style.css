@@ -4,6 +4,7 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     list-style-type: none;
+    
 }
 header{
     display: flex;
@@ -131,15 +132,21 @@ footer{
     background-color: #35424a;
     text-align: center;
     padding: 15px;
-    margin-bottom: 0px;
+    height: 150px;
+    
 }
+
 .footer__img{
-    padding: 55px;
+    padding-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
 }
 /*About html start*/
 .about{
     text-align: center;
-    padding: 30px;
+    padding: 80px;
+    
 }
 .text1{
     padding: 50px;
@@ -156,7 +163,7 @@ footer{
 article{
     background-color: white;
     display: flex;
-    padding: 50px;
+    padding: 78px;
 }
 .services__content1,.services__content2{
     background-color: #DFDBDB;
