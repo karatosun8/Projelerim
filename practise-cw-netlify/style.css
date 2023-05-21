@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* <!-- *Header Start --> */
+header{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 16px;
+    background-image: linear-gradient(rgb(95, 165, 231), rgba(190, 132, 190, 0.568));
+    
+}
+.logo img{
+    width: 60px;
+    height: 78px;
+    
+}
+.sign-in{
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+}
+
+.sign-in ul{
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+    justify-content: end;
+    
+  
+}
+.sign-in li{
+    padding: 10px;
+}
+.sign-in li a{
+    text-decoration: none;
+    font-weight: 900;
+    
+}
+.sign-in li a:hover{
+    border-bottom: 1px solid ;
+}
+.logo{
+    justify-content: flex-start;
+    width: 50%;
+}
+/* <!-- *Header End --> */
+
+
+/* <!-- *Nav Start --> */
+.sticky{
+    background-image: linear-gradient(to right, rgb(231, 205, 88) , rgb(196, 66, 189));
+    position: sticky;
+    top: 0px;
+    
+    
+}
+
+.sticky ul{
+    display: flex;
+    list-style-type: none;
+    padding: 15px;
+    justify-content:center;
+    
+}
+.sticky ul li a{
+    text-decoration: none;
+    font-family: 'DynaPuff', cursive;
+    font-size: 16px;
+    color: black;
+    
+}
+.sticky ul li a:hover{
+    color: white;
+}
+.sticky ul li{
+    padding: 10px;
+}
+/* <!-- *Nav End --> */
+
+/* <!-- Main Star --> */
+main{
+    background-image: url(./img/banner.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
+    
+    
+}
+.main-text h2{
+    color: white;
+    font-size: 48px;
+    font-weight: 700; 
+}
+.main-text h3{
+    color: #ff0000;
+    text-shadow: rgb(128,128,128)0px 2px 4px;
+}
+button{
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    background-color: #b4a4a4;
+}
+button:hover{
+    background-color: #d9afd9;
+    cursor: pointer;
+}
+
+/* <!-- Main End --> */
+/* section start */
+section p{
+    text-align: justify;
+    padding: 15px;
+}
