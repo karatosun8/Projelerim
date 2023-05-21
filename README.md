@@ -1,4 +1,6 @@
 # Projelerim
+https://karatosun8.github.io/Projelerim/Pro-Tec-go%20Design/
+
 https://karatosun8.github.io/Projelerim/practise-cw-netlify/
 
 https://karatosun8.github.io/Projelerim/Website-Page-Desing-1/
