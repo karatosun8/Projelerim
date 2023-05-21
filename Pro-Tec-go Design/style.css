@@ -13,6 +13,7 @@ body {
 main{
     justify-content: center;
 }
+/* Title Start */
 .title{
     padding: 5rem;
     text-align: center;
@@ -28,6 +29,10 @@ main{
     transform: scale(1.09);
     color: rgba(250, 235, 215, 0.884);
 }
+
+/* Title End */
+
+/* section start */
 .section{
     display:block;
     justify-content:center;
@@ -62,8 +67,9 @@ main{
     transform: scale(1.15);
     color: rgba(255, 228, 196, 0.404);
 }
+/* section end */
 
-
+/* footer strat */
 footer ul{
     display: flex;
     justify-content: center;
@@ -84,3 +90,4 @@ footer ul li a i:hover{
     color: orangered;
     transform: scale(1.5);
 }
+/* footer end */
