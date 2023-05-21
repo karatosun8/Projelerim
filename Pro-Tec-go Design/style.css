@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: border-box;
+}
+body {
+    background-image: url("./img/pexels-anete-lusina-4792714.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+main{
+    justify-content: center;
+}
+.title{
+    padding: 5rem;
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    line-height: 4rem;
+    letter-spacing: 0.4rem;
+    justify-content: center;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    
+}
+.title h1:hover{
+    transform: scale(1.09);
+    color: rgba(250, 235, 215, 0.884);
+}
+.section{
+    display:block;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding: 90px;
+    width: 50%;
+    margin-left: 400px;
+    background-color: rgba(129, 121, 121, 0.4);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    
+}
+.section1 ul,.section2 ul{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin: 90px;
+    
+}
+.section1 ul li ,.section2 ul li {
+    list-style-type: none;
+    
+    
+}
+.section1 ul li a,.section2 ul li a{
+    font-size: 50px;
+    color: beige;
+}
+.section1 ul li a i:hover,.section2 ul li a i:hover{
+    transform: scale(1.15);
+    color: rgba(255, 228, 196, 0.404);
+}
+
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+footer ul li{
+    list-style-type: none;
+    padding: 10px;
+}
+
+footer ul li a{
+    font-size: 30px;
+    color: beige;
+    padding: 20px;
+}
+
+footer ul li a i:hover{
+    color: orangered;
+    transform: scale(1.5);
+}
