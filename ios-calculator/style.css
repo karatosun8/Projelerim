@@ -5,18 +5,28 @@
 }
 
     .main{
-        /* background-color: black; */
+        background-color: black;
         max-width: 500px;
         height: 840px;
-        margin: 3rem;
         color: white;
         border-radius: 50px;
+        margin: auto;
         display: grid;
-        position: relative;
+        
+    }
+    .screen{
+        width: 75%;
+        height: 20%;
+        background-color: blueviolet;
+        margin: 60px auto 5px;
+        text-align:right;
+        padding: 60px;
+        border-radius: 10px;
+        
+    }
+    .container{
+        background-color: rgb(4, 4, 102);
+        
     }
 
-    /* bilinmiyor */
-   
-    .container{
-        background-color: #eeeb59;
-    }
+  
