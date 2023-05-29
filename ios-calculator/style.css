@@ -4,4 +4,19 @@
     box-sizing: border-box;
 }
 
-    
+    .main{
+        /* background-color: black; */
+        max-width: 500px;
+        height: 840px;
+        margin: 3rem;
+        color: white;
+        border-radius: 50px;
+        display: grid;
+        position: relative;
+    }
+
+    /* bilinmiyor */
+   
+    .container{
+        background-color: #eeeb59;
+    }
