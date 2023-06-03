@@ -10,7 +10,7 @@ btnClick.onclick= () => {
     let color2 = Math.trunc(Math.random()*255);
     let color3 = Math.trunc(Math.random()*255);
     document.body.style.backgroundColor = "rgb("+color1+","+color2+","+color3+")";
-}
+} 
 
 btnOver.onmouseover = () =>{
     let color1 = Math.trunc(Math.random()*255);
