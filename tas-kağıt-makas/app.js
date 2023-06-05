@@ -38,12 +38,18 @@ selectionArticle.addEventListener("click", (e) => {
   }
 })
 
+playAgainBtn.addEventListener("click", () => {
+  // modalCardSection.classList.toggle("show")
+  // modalCardSection.classList.toggle("remove")
+  modalCardSection.style.display = "none"
+  window.location.reload()
+})
+
 //* ------- Functions ------- */
 
 const createPcSelection = () => {
   const pcArr = ["rock", "paper", "scissor"]
   pcRandom = pcArr[Math.floor(Math.random() * 3)]
-  pcRandom = "rock"
   pcSelectImg.src = `./assets/${pcRandom}.png`
   pcSelectImg.alt = pcRandom
   pcChoiceDiv.appendChild(pcSelectImg)
@@ -92,15 +98,26 @@ const youWin = () => {
   yourScoreSpan.textContent++
 }
 
+//? modal aç
 const openModal = () => {
   modalCardSection.classList.add("show")
 
   if (yourScoreSpan.textContent === "10") {
+    //? eger kullanici 10 puana usalti ise kullanici kazanmistir.
     finalMessagePar.textContent = "💃 You Win🕺"
     document.querySelector(".modal").style.backgroundColor = GREEN
     playAgainBtn.style.color = GREEN
+  } else {
+    //? eger pc 10 puana ulasti ise pc kazanmistir.
+    finalMessagePar.textContent = "☹️ You Lost ☹️"
+    document.querySelector(".modal").style.backgroundColor = RED
+    playAgainBtn.style.color = RED
   }
 }
+
+//! Local Storage'a veri yazma ve okuma
+localStorage.setItem("highScore", 5) //? veri yazma
+console.log(localStorage.getItem("highScore")) //? veri okuma
 
 //! İlkel Yontem
 //? Resimler
