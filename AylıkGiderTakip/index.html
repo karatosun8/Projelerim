@@ -1,69 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aylık Gider Takip Uygulaması</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gider Takip Uygulaması</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="text-warning text-center display-5 my-4">
+      Aylık Gider Uygulaması
+    </header>
 
-</head>
-<body >
-    <!-- Baslik -->
-    <h1 class="baslik display-2 text-warning text-center">Aylık Gider Takip Uygulaması</h1>
-    <!-- Gelir Ekle -->
-    <div class="input-group mb-3 mt-3 w-50 m-auto">
-        <input type="text" class="form-control " placeholder="Gelir ekle..." aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary bg-warning text-dark" type="button" id="button-addon2">Ekle</button>
-      </div>
-      <!-- Harcama Formu -->
-      <form class="row g-3 w-50 m-auto border border-1 rounded-3 p-3">
+    <main class="container" style="max-width: 800px">
+      <form id="ekle-formu" class="d-flex gap-2">
+        <input
+          id="gelir-input"
+          class="form-control"
+          type="number"
+          min="0"
+          autofocus
+          placeholder="Gelirinizi giriniz."
+          required
+        />
+        <button id="ekle-btn" type="submit" class="btn btn-warning">
+          Ekle
+        </button>
+      </form>
+
+      <form id="harcama-formu" class="row g-3 p-3 mt-4 border rounded-4 m-0">
+        <h4 class="text-center">Harcama Formu</h4>
         <div class="col-6">
-          <label for="validationDefault01" class="form-label">Harcama Yapılan Yer</label>
-          <input type="text" class="form-control" id="validationDefault01" value="" placeholder="Manav,market,fatura vb..." required>
+          <label for="harcama-alani" class="form-label">Harcama Alanı</label>
+          <input
+            type="text"
+            class="form-control"
+            id="harcama-alani"
+            placeholder="Manav, Bakkal, fatura"
+            required
+          />
         </div>
         <div class="col-6">
-          <label for="validationDefault02" class="form-label">Tarih</label>
-          <input type="date" class="form-control" id="validationDefault02" value="" required>
+          <label for="tarih" class="form-label">Tarih</label>
+          <input type="date" class="form-control" id="tarih" required />
         </div>
-        
         <div class="col-12">
-          <label for="validationDefault03" class="form-label">Harcanan Miktar</label>
-          <input type="number" class="form-control" id="validationDefault03" placeholder="100 ₺"  required>
+          <label for="miktar" class="form-label">Harcanan Miktar</label>
+          <input
+            type="number"
+            class="form-control"
+            id="miktar"
+            placeholder="1000 ₺"
+            required
+          />
         </div>
-        
-        
-        <div class="text-center  mt-3">
-          <button class="btn btn-warning " type="submit">Kaydet</button>
+
+        <div class="col-12 text-center">
+          <button id="kaydet" type="submit" class="btn btn-warning">
+            Kaydet
+          </button>
         </div>
       </form>
 
-      <!-- Tablo -->
-      <div class="container ">
-      <table class="table mt-2 w-75 m-auto">
-        <thead class="border border-1 text-center">
-          <tr class="">
-            <th scope="col" class="border border-1 ">Tarih</th>
-            <th scope="col" class="border border-1 ">Harcanan Yer</th>
-            <th scope="col" class="border border-1 ">Miktar</th>
-            <th scope="col" class="border border-1 "></th>
+      <table
+        id="harcama-tablosu"
+        class="table table-bordered table-hover table-striped mt-4 text-center"
+      >
+        <thead>
+          <tr>
+            <th scope="col" class="w-25">Tarih</th>
+            <th scope="col" class="w-50">Harcama Alanı</th>
+            <th scope="col">Miktar (₺)</th>
+            <th scope="col">İşlem</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="harcama-body">
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <table
+        id="sonuc-tablosu"
+        class="table table-bordered table-hover table-striped mt-4 text-center w-50 ms-auto"
+      >
+        <tbody class="text-end">
           <tr>
-            <th scope="row"></th>
-            <td></td>
-            <td></td>
-            <td></td>
+            <th>Geliriniz:</th>
+            <td id="geliriniz">0</td>
+          </tr>
+          <tr>
+            <th>Gideriniz:</th>
+            <td id="gideriniz">0</td>
+          </tr>
+          <tr>
+            <th>Kalan:</th>
+            <td id="kalan">0</td>
           </tr>
         </tbody>
-        </table>
-        </div>
+      </table>
 
+      <section class="text-center">
+        <button class="btn btn-warning">Bilgileri Temizle</button>
+      </section>
+    </main>
 
-    <script src="./app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
