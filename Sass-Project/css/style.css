@@ -1,3 +1,30 @@
-
+.header {
+  height: 50px;
+  width: 50px;
+  min-width: auto;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul.header__links {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  justify-content: end;
+  display: flex;
+  text-decoration: none;
+}
+.header ul.header__links li {
+  display: inline-block;
+  text-decoration: none;
+  list-style-type: none;
+  margin: 1rem;
+  font-weight: 500;
+}
+.header ul.header__links button {
+  padding: 0.5rem;
+}
 
 /*# sourceMappingURL=style.css.map */
