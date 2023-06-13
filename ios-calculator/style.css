@@ -30,7 +30,7 @@
     height: 15rem;
     width: 100%;
     text-align: right;
-    padding: 1rem;
+    padding: 0.5rem;
     font-size: 4rem;
     display: flex;
     flex-direction: column;
@@ -96,8 +96,9 @@
       width: 4rem;
     }
     .button.number-0 {
+    justify-content: center;
       border-radius: 2rem;
       padding-left: 1.3rem;
-      width: 8rem;
+      width: 12rem;
     }
   
