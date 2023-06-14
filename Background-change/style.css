@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    
+    
+}
+button {
+    margin: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: x-large;
+}
+#text {
+    width: 25%;
+    height: 10%;
+    background-color: beige;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: large;
+    border-radius: 5px;
+    border-style: groove;
+}
