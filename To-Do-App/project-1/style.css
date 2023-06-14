@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #9d08b131;
+    width: 100vh;
+    height: 100vh;
+}
+.form-check{
+    width: 75%;
+}
