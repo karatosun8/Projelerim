@@ -4,9 +4,30 @@
 }
 body {
     background-color: #9d08b131;
-    width: 100vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 }
-.form-check{
-    width: 75%;
+.main{
+    background-color:#a862a2 ;
+}
+#card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vh;
+    height: 25%;
+    background-color: #e08cdc9c;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 5px;
+}
+.checkbox{
+    width: 1rem;
+    height: 1rem;
+}
+#h2{
+    color: #ff8c00;
+}
+.form-label h4{
+    color: #914545da;
 }
