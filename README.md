@@ -1,5 +1,5 @@
 # Projelerim
-http://127.0.0.1:5500/To-Do-App/project-2/index.html
+https://karatosun8.github.io/Projelerim/To-Do-App/project-2/
 
 https://karatosun8.github.io/Projelerim/js-changeBackground/
 
