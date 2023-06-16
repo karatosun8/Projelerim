@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+}
+div{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+button{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b1d857;
+    font-size: 30px;
+    &:hover{
+        background-color: #69e9698e;
+    }
+}
+
+
+span{
+    font-size: 50px;
+    background-color: #37d1c9;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+}
