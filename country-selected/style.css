@@ -9,7 +9,14 @@ body {
 }
 .container {
     background-color: #ffffff;
+    width: 80vh;
+    max-width: 37.5em;
     padding: 3rem  2.5rem;
     position: absolute;
-    transform: translate(-50%,-50%);    
+    transform: translate(-50%,-50%);  
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 1.25em 1.8em rgba(0.25,8 green,21 blue,65 alpha);
+
 }
