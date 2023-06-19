@@ -9,8 +9,8 @@ form.addEventListener("click", (e) => {
   //   form.reset();
   //   e.target.reset();
 
-  //   console.log(e.target);
-  //   console.log(e.currentTarget);
+    // console.log(e.target);
+    // console.log(e.currentTarget);
   getData();
   e.currentTarget.reset();
 });
