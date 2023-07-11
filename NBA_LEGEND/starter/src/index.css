@@ -14,3 +14,18 @@ body {
   background-repeat: no-repeat;
   min-height: 400px;
 }
+.player-card {
+  height: 400px;
+  & img{
+    filter: blur(2px);
+    transition: transform 0.3s;
+  }
+  &:hover{
+    box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.5);
+    & img{
+      transform: scale(0.9);
+      filter: none;
+    }
+  }
+
+}
