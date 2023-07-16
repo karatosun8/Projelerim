@@ -1,5 +1,5 @@
 import Pictures from "../components/Pictures";
-// import "../styles/style.css"
+import "../styles/style.css"
 
 
 const Homepage =()=>{

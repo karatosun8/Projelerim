@@ -82,8 +82,9 @@
   }
   
   img:hover {
-    -webkit-transform: scale(1.25);
-            transform: scale(1.25);
+    -webkit-transform: scale(1.01);
+            transform: scale(1.02);
+            pointer:cursor;
             
   }
   
