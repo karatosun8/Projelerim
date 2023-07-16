@@ -1,7 +1,12 @@
+import Homepage from "./pages/Homepage"
+
+
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <h1>Albums</h1>
+      <Homepage/>
     </div>
   )
 }
