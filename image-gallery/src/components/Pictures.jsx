@@ -6,15 +6,23 @@ import Col from "react-bootstrap/Col";
 
 const Pictures = () => {
   return (
-    <Container>
+    <Container >
       
-      <Row>
-        <Col xs={12} md={8}>
-          xs=12 md=8
-        </Col>
-        <Col xs={6} md={4}>
-          xs=6 md=4
-        </Col>
+      
+
+      <Row className="justify-content-center">
+        {data.map((item,index) => (
+          <Col key={index} xs={6} sm={4} md={3} >
+            <img
+              src={item.src.large}
+              
+              className="img-thumbnail doctor-img"
+              
+            />
+            <h5>Photographer: {item.photographer}</h5>
+            
+          </Col>
+        ))}
       </Row>
 
       
@@ -26,14 +34,3 @@ const Pictures = () => {
 
 export default Pictures;
 
-
-// {data.map((item, index) => (
-//     <Col xs={6} s={4} md={3} lg={3} key={index}>
-//       <img
-//         src={item.src.large}
-//         width={"200px"}
-//         className="img-thumbnail"
-//       />
-//       <p>Photographer: {item.photographer}</p>
-//     </Col>
-//   ))}
