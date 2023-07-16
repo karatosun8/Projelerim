@@ -1,21 +1,32 @@
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
-import Form from "react-bootstrap/Form";
-import { useState } from "react";
+import Button from "react-bootstrap/Button"
+import Modal from "react-bootstrap/Modal"
+import Form from "react-bootstrap/Form"
+import { useState } from "react"
 
-function AddModal({ show, handleClose }) {
-  const [name, setName] = useState("");
-  const [date, setDate] = useState(new Date().toISOString().slice(0,10));  // tarihin otomatik olarak gelmesi için
- 
-  const handleSubmit=(e)=> {
-    e.preventDefault()  //otomatik refreshi kapatır
+function AddModal({ show, handleClose, apps, setApps, drName }) {
+  const [name, setName] = useState("")
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10))
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setApps([
+      ...apps,
+      {
+        id: new Date().getTime(),
+        patient: name,
+        day: date,
+        consulted: false,
+        doctor: drName,
+      },
+    ])
+    setName("")
+    handleClose()
   }
-
   return (
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appointment for...</Modal.Title>
+          <Modal.Title>Appointment for {drName}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
@@ -23,23 +34,29 @@ function AddModal({ show, handleClose }) {
               <Form.Label>Patient Name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="Enter Your Name"
+                placeholder="Enter name"
                 onChange={(e) => setName(e.target.value)}
+                value={name}
+                required
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="date">
-              <Form.Label>Day & Time</Form.Label>
-              <Form.Control type="date" placeholder="Password"
-              onChange={(e)=>setDate(e.target.value)} 
-              value={date}/>
+              <Form.Label>Date</Form.Label>
+              <Form.Control
+                type="date"
+                placeholder="Date"
+                onChange={(e) => setDate(e.target.value)}
+                value={date}
+                required
+              />
             </Form.Group>
 
             <div className="text-center">
-              <Button variant="primary" type="submit" className="me-2">
+              <Button variant="success" type="submit" className="me-2">
                 Save
               </Button>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button variant="danger" onClick={handleClose}>
                 Close
               </Button>
             </div>
@@ -47,7 +64,7 @@ function AddModal({ show, handleClose }) {
         </Modal.Body>
       </Modal>
     </>
-  );
+  )
 }
 
-export default AddModal;
+export default AddModal
