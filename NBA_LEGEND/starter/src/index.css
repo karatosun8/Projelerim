@@ -17,13 +17,13 @@ body {
 .player-card {
   height: 400px;
   & img{
-    filter: blur(2px);
+    filter: blur(1.5px);
     transition: transform 0.3s;
   }
   &:hover{
     box-shadow: 3px 3px 20px 5px rgba(0,0,0,0.5);
     & img{
-      transform: scale(0.9);
+      transform: scale(0.95);
       filter: none;
     }
   }
