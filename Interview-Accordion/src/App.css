@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 72px;
+    text-align: center;
+}
+.myClass {
+    background: linear-gradient(to right, #ff0000, #00ff00);
+    border: 1px solid black;
+  }
+  h2{
+    font-family: 'Cinzel', serif;
+  }

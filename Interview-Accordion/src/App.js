@@ -1,7 +1,11 @@
+import Header from "./components/Header"
+import "./App.css"
+import Questions from "./components/Questions"
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <Header/>
+      <Questions/>
     </div>
   )
 }
