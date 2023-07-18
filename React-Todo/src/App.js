@@ -32,12 +32,14 @@ function deleteItem(id){
   return (
     <div className="App">
       <h1 className="text-center">Reract Todo List</h1>
-      <InputGroup className="mb-3">
+      <InputGroup className="m-auto w-75 justify-content-center">
         <Form.Control
+        className=''
           type='text'
           placeholder="Add an Item..."
           value={newItem}
-          onChange={e => setNewItem(e.target.value)}
+          onChange={e => setNewItem(e.target.value)
+          }
           
         />
         <Button variant="secondary" onClick={()=>addItem()}>
@@ -48,8 +50,8 @@ function deleteItem(id){
         {items.map(item =>{
           return(
             
-            <li className='text-start p-1' key={item.id}>{item.value} 
-            <Button variant="danger" onClick={()=>deleteItem(item.id)} className='text-end  m-1 '>
+            <li className='text-start p-1 m-1' key={item.id}>{item.value} 
+            <Button variant="danger" onClick={()=>deleteItem(item.id)} className='text-end  m-1'>
           Sil
         </Button></li>
         
