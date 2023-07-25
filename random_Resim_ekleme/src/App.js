@@ -30,11 +30,13 @@ function App() {
     <div className="App">
       <button onClick={handleClick}>Random Resim Ekleme</button>
       <div>
-        <Container xs={1} sm={2} md={3} lg={4}>
+        <Container >
           <Row >
+            <Col xs={1} sm={2} md={3} lg={4}>
             {resims.map((resim, index) => {
               return <Resim key={index} resimName={resim} />;
             })}
+            </Col>
           </Row>
         </Container>
       </div>
