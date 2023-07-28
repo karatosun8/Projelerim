@@ -1,9 +1,10 @@
 import {useState} from "react"
 
-function TaskCreate ({onCreate}){//onCreate App.js e gönderildi
-    const [title,setTitle] = useState("")
-    const [taskDesc,setTaskDesc] = useState("")
 
+function TaskCreate ({onCreate,task,taskFormUpdate}){//onCreate App.js e gönderildi
+    const [title,setTitle] = useState(task ? task.title : " " )
+    const [taskDesc,setTaskDesc] = useState(task ? task.taskDesc : " ")    // useState in içindekiler düzenle butonu için geçerli Aksi halde içi boş idi  
+   
     const handleChange =(event)=>{
         setTitle(event.target.value)
 
@@ -20,7 +21,22 @@ function TaskCreate ({onCreate}){//onCreate App.js e gönderildi
 
     };
     return (
-        <div className="task-create">
+    <div>
+            {" "}
+            {taskFormUpdate ? (
+                <div className="task-update">
+                <h3>Lütfen Task Düzenleyin</h3>
+                <form className="task-form">
+                    <label className="task-label">Başlığı Düzenleyiniz</label>
+                    <input value={title} onChange={handleChange} className="task-input"/>
+                    <label className="task-label">Taskı Düzenleyiniz</label>
+                    <textarea value={taskDesc} onChange={handleTaskChange} className="task-input" rows={5}/>
+                    <button className="task-button update-button" onClick={handleSubmit}>Düzenle</button>
+                </form>
+            </div> 
+
+            ) : (
+                <div className="task-create">
             <h3>Lütfen Task Ekleyiniz</h3>
             <form className="task-form">
                 <label className="task-label">Başlık</label>
@@ -29,7 +45,13 @@ function TaskCreate ({onCreate}){//onCreate App.js e gönderildi
                 <textarea value={taskDesc} onChange={handleTaskChange} className="task-input" rows={5}/>
                 <button className="task-button" onClick={handleSubmit}>Oluştur</button>
             </form>
-        </div>
-    )
+        </div> 
+            ) }
+            
+        </div> )
 }
-export default TaskCreate
+          
+    
+    
+
+       export default TaskCreate;
