@@ -1,7 +1,7 @@
 import {useState} from "react"
 
 
-function TaskCreate ({onCreate,task,taskFormUpdate}){//onCreate App.js e gönderildi
+function TaskCreate ({onCreate,task,taskFormUpdate,onUpdate}){//onCreate App.js e gönderildi
     const [title,setTitle] = useState(task ? task.title : " " )
     const [taskDesc,setTaskDesc] = useState(task ? task.taskDesc : " ")    // useState in içindekiler düzenle butonu için geçerli Aksi halde içi boş idi  
    
@@ -15,7 +15,13 @@ function TaskCreate ({onCreate,task,taskFormUpdate}){//onCreate App.js e gönder
     }
     const handleSubmit =(event)=>{
         event.preventDefault();
-        onCreate(title,taskDesc);//title ve taskCreate App.js e gönderdik
+        if(taskFormUpdate){
+            onUpdate(task.id,title,taskDesc)
+        }
+        else {
+            onCreate(title,taskDesc);//title ve taskCreate App.js e gönderdik
+        }
+        
         setTitle("");//handleSubmitten sonra input boşalır
         setTaskDesc("")//handleSubmitten sonra input boşalır
 

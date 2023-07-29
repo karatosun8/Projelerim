@@ -24,11 +24,22 @@ const deleteTaskById =(id)=>{
   setTasks(afterDeletingTasks)
 
 }
+const editTaskById =(id,updatedTitle,updatedtaskDesc)=>{
+  const updatedTasks= tasks.map((task)=>{
+    if(task.id===id){
+      return {id,title:updatedTitle,taskDesc:updatedtaskDesc}
+    }
+    return task;
+    
+  })
+  setTasks(updatedTasks)
+
+}
   return (
     <div className="App">
       <TaskCreate onCreate={createTask}/> {/*onCreate yakalandı*/}
       <h1>Görevler</h1>
-      <TaskList tasks={tasks} onDelete={deleteTaskById} />
+      <TaskList tasks={tasks} onDelete={deleteTaskById} onUpdate={editTaskById}/>
     </div>
   );
 }
