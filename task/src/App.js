@@ -33,6 +33,7 @@ const fetchTasks = async ()=>{
   const response= await axios.get("http://localhost:3004/tasks")
  setTasks(response.data)
 }
+//Aşağıdaki kod bi defa çalıştırılır [] den dolayı
 useEffect(()=>{
 
   fetchTasks ();
@@ -53,6 +54,7 @@ const deleteTaskById =async (id)=>{
 
 //db deki json dosyasını güncellemek için
 const editTaskById =async (id,updatedTitle,updatedtaskDesc)=>{
+  
   await axios.put(`http://localhost:3004/tasks/${id}`,{
     title:updatedTitle,
     taskDesc:updatedtaskDesc
