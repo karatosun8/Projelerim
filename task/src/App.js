@@ -1,30 +1,63 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import TaskCreate from './components/TaskCreate';
 import TaskList from './components/TaskList';
+import axios from "axios"
 
 function App() {
   const [tasks,setTasks] =useState([])
-  const createTask =(title,taskDesc)=>{
-    const createdTasks=[
-      ...tasks,{
-        id:Math.round(Math.random()*999999),
-        title,
-        taskDesc
+  const createTask =async (title,taskDesc)=>{
 
-      }
+    const response=await axios.post("http://localhost:3004/tasks",{
+      title,
+      taskDesc
+    }) //json data bs e port etmek için yani girilen bilgiler db.json dosyasına gider
+    console.log(response)
+    const createdTasks=[
+      ...tasks,
+      // {
+      //   id:Math.round(Math.random()*999999),
+      //   title,
+      //   taskDesc
+      // }
+      response.data
     ];
     setTasks(createdTasks);
+};
+
+
+// useEffect kullanarak girilen bilgiler reset atılsa bile silinmez db.json dosyasında kalır.get kullanarak bilgileri alabiliriz
+const fetchTasks = async ()=>{
+
+  const response= await axios.get("http://localhost:3004/tasks")
+ setTasks(response.data)
 }
-const deleteTaskById =(id)=>{
+useEffect(()=>{
+
+  fetchTasks ();
+ 
+},[])
+
+
+
+const deleteTaskById =async (id)=>{
+  await axios.delete(`http://localhost:3004/tasks/${id}`)
   const afterDeletingTasks= tasks.filter((task)=>{
     return task.id !==id;
   })
   setTasks(afterDeletingTasks)
 
 }
-const editTaskById =(id,updatedTitle,updatedtaskDesc)=>{
+
+
+//db deki json dosyasını güncellemek için
+const editTaskById =async (id,updatedTitle,updatedtaskDesc)=>{
+  await axios.put(`http://localhost:3004/tasks/${id}`,{
+    title:updatedTitle,
+    taskDesc:updatedtaskDesc
+
+  })
   const updatedTasks= tasks.map((task)=>{
     if(task.id===id){
       return {id,title:updatedTitle,taskDesc:updatedtaskDesc}
