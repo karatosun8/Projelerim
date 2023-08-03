@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+
+.navbar{
+    background-color: $cardNavBgColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .link{
+        display: flex;
+        font-size: 1.5rem;
+        gap: 2%;
+
+        a{
+            text-decoration: none;
+            color: $secondaryColor;
+            padding: 0.5rem;
+    
+            &:hover{
+                background-color:$secondaryColor;
+                color: $cardNavBgColor;
+                border-radius: 5px;
+                transition: all 0.5s;
+            }
+        }
+        
+    }
+
+
+
+
+    img{
+        width: 100px;
+        height: 100px;
+    }
+   
+    
+
+}
+@include media-xsm{
+    .link{
+        flex-direction: column;
+    }
+}
+
+@include media-lg{
+    .link{
+        flex-direction: row;
+    }
+}
