@@ -1,0 +1,41 @@
+//Ortak scss lerden veri alabilmek için import ettik
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.header{
+    text-align: center;
+    margin: 1rem;
+    padding: 0.5rem;
+    margin-top: 15rem;
+
+    //nested yapı text-shadow header calsının içinde olduğu için aşağıdaki gibi yazılanilir
+    .text-shadow{
+        font-size: 3rem;
+        color: $secondaryColor;
+        text-transform: uppercase;
+        text-decoration: underline;
+        letter-spacing: 0.2rem;
+        //Animasyon hızı için
+        transition: all 0.7s ease-in-out; 
+        //Animasyon için flicker gerekli
+        animation: flicker 0.5s ease-in-out infinite alternate;
+        //text üzerinde hover vermek için
+        &:hover{
+            color: $cardNavBgColor;
+            cursor: pointer;
+        }
+
+    }
+
+    //Animasyon için
+    @keyframes flicker {
+        0%{
+            opacity: 0.5;
+            text-shadow: 2px 2px 10px $cardNavBgColor;
+        }
+        100%{
+            opacity: 1;
+            text-shadow: 2px 2px 10px $cardNavBgColor;
+        }
+    }
+}
