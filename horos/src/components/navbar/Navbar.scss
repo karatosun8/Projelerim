@@ -7,10 +7,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
+    //Navbar scroll olsa bile sabit kalır
+    position: fixed;
+    width: 100%;
+    top: 0;
+    //scroll olunca hep en üstde kalır z-index sayesinde
+    z-index: 4;
     
     .link{
         display: flex;
         font-size: 1.5rem;
+        justify-content: flex-end;
         gap: 2%;
 
         a{
