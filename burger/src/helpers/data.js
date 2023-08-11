@@ -1,4 +1,4 @@
-
+import React from "react"
 import image from "../assets/burger-4.jpg"
 
 export const Data = [
